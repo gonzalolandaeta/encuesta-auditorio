@@ -1,1 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.contenedor {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+h2 {
+  text-align: center;
+}
+
+form label {
+  margin-top: 10px;
+  display: block;
+}
+
+form input, form select, form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#estadisticas {
+  margin-top: 20px;
+  font-size: 14px;
+}
 
