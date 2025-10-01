@@ -3,12 +3,12 @@ let respuestas = JSON.parse(localStorage.getItem('respuestas')) || [];
 document.getElementById('formulario').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const edad = parseInt(document.getElementById('edad').value);
-  const educacion = document.getElementById('educacion').value;
-  const interes = document.getElementById('interes').value;
-  const repetir = document.getElementById('repetir').value;
+  const sexo = document.getElementById('sexo').value;
+  const ciudad = document.getElementById('ciudad').value;
+  const utilidad = document.getElementById('utilidad').value;
+  const recomendar = document.getElementById('recomendar').value;
 
-  respuestas.push({ edad, educacion, interes, repetir });
+  respuestas.push({ sexo, ciudad, utilidad, recomendar });
   localStorage.setItem('respuestas', JSON.stringify(respuestas));
 
   alert('Respuesta registrada');
@@ -22,14 +22,10 @@ function mostrarEstadisticas() {
   }
 
   const total = respuestas.length;
-  const promedioEdad = Math.round(respuestas.reduce((acc, r) => acc + r.edad, 0) / total);
-  const interesAlto = respuestas.filter(r => r.interes === 'Alto').length;
-  const repetirSi = respuestas.filter(r => r.repetir === 'Sí').length;
+  const recomendarSi = respuestas.filter(r => r.recomendar === 'Sí').length;
 
   document.getElementById('estadisticas').innerHTML = `
     <strong>Total registrados:</strong> ${total}<br>
-    <strong>Edad promedio:</strong> ${promedioEdad} años<br>
-    <strong>Interés alto:</strong> ${interesAlto}<br>
-    <strong>Repetirían sesión:</strong> ${repetirSi}
+    <strong>Recomiendan el evento:</strong> ${recomendarSi}
   `;
 }
