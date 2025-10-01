@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta del Auditorio</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Encuesta del Auditorio</h2>
+    <form id="formulario">
+      <label>1. ¿Edad?</label>
+      <input type="number" id="edad" required>
+      <label>2. ¿Nivel educativo?</label>
+      <select id="educacion" required>
+        <option value="">Selecciona</option>
+        <option value="Primaria">Primaria</option>
+        <option value="Secundaria">Secundaria</option>
+        <option value="Universitaria">Universitaria</option>
+        <option value="Postgrado">Postgrado</option>
+      </select>
+      <label>3. ¿Interés en el tema?</label>
+      <select id="interes" required>
+        <option value="">Selecciona</option>
+        <option value="Bajo">Bajo</option>
+        <option value="Medio">Medio</option>
+        <option value="Alto">Alto</option>
+      </select>
+      <label>4. ¿Participaría en otra sesión?</label>
+      <select id="repetir" required>
+        <option value="">Selecciona</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+      <button type="submit">Registrar</button>
+    </form>
+    <button onclick="mostrarEstadisticas()">Ver estadísticas</button>
+    <div id="estadisticas"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
