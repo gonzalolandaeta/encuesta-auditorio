@@ -33,4 +33,3 @@ function mostrarEstadisticas() {
     <strong>Repetirían sesión:</strong> ${repetirSi}
   `;
 }
-
